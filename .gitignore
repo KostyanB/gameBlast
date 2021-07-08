@@ -19,5 +19,6 @@ read_me.txt
 
 # for server imitation
 server.php
-DrawTitles.js
 README.md
+
+titleSelect.js
