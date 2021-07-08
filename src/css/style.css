@@ -1,38 +1,56 @@
-* {
-    /* box-sizing: border-box; */
+body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
 }
 
-.game_field {
-    width: 420px;
-    height: 620px;
-    /* width: fit-content; */
-    /* height: fit-content; */
+.game-field {
+    /* width: 400px; */
+    /* height: 600px; */
     display: block;
     background-color: #0d233d;
     margin: 20px auto;
     padding: 5px;
-    color:antiquewhite;
     border: 4px solid #59bed6;
     border-radius: 20px;
+    /* overflow: hidden; */
 }
-.field {
-    /* background-color: gray; */
-    box-sizing: content-box;
-    width: fit-content;
-    margin: auto;
-}
-.field table {
-    border-spacing: 0;
+.field-wrap {
+    /* width: 400px; */
+    /* height: 600px; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.field td {
+.field-line {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.field-cell {
     width: 40px;
-    height: 40px;
-    /* border: 1px solid black; */
+    height: 45px;
     padding: 1px;
+    box-sizing: border-box;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
-
-.field td > img {
-    height: auto;
+.field-cell > img {
+    height: 100%;
     width: 100%;
 }
+
+.game-control {
+    display: flex;
+    width: 50%;
+}
+.game-control > button {
+    height: 60px;
+    width: 60px;
+    margin-top: 200px;
+}
+
