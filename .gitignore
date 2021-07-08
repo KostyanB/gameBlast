@@ -15,6 +15,7 @@ read_me.txt
 /css/
 /fonts/
 /images/
+/drafts/
 
 # for server imitation
 server.php
