@@ -1,5 +1,6 @@
 import './css/style.css';
 import setFieldSize from './modules/setFieldSize';
+import setFieldMap  from './modules/setFieldMap';
 import DrawGameField  from './modules/DrawGameField';
 
 
@@ -11,6 +12,9 @@ const gameFieldSetting = {
 };
 // установка размеров поля
 setFieldSize(gameFieldSetting);
+// создание карты игрового поля
+const fieldMap = setFieldMap(gameFieldSetting);
+console.log('fieldMap: ', fieldMap);
 // прорисовка поля
 const gameField = new DrawGameField(gameFieldSetting);
 gameField.init();
