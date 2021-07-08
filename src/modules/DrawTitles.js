@@ -1,7 +1,4 @@
 import { gameSettings } from './gameSettings';
-import { keyGen, imgNumGen } from "./keyGens";
-// ключи для тайтлов 7 знаков
-// const titleKey = keyGen(7);
 
 class DrawTitles {
 	constructor(currentCell) {
@@ -12,11 +9,11 @@ class DrawTitles {
 	// расстановка тайтлов
 	addTitles(keys) {
 		const [x, y, imgNum, titleKey] = keys;
-		// const imgNum =  imgNumGen(1, this.validColorQuantity());
+
 		this.currentCell.innerHTML = `
-			<img src="images/title-img${imgNum}.png"
+			<img src="images/title-img${imgNum}.png" class="title-img"
             alt="${this.titlesColorName[imgNum - 1]}" data-key="${titleKey}"
-			data-x="${x}" data-y="${y}">
+			data-x="${x}" data-y="${y}" data-color-num="${imgNum}">
         `;
 	}
 	// проверка пользовательского кол-ва цветов
