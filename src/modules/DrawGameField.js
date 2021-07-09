@@ -1,5 +1,5 @@
 import DrawTitles from './DrawTitles';
-
+import { setFieldMap }  from './setFieldMap';
 import { gameSettings } from './gameSettings';
 const startBtn = document.getElementById('start'),
 	fieldWrap = document.querySelector('.field-wrap');
@@ -8,7 +8,7 @@ const startBtn = document.getElementById('start'),
 class DrawGameField {
 	constructor() {
 		this.titlesColorQuantity = gameSettings.titlesColorQuantity;
-		this.fieldMap = gameSettings.fieldMap;
+		this.fieldMap = gameSettings.fieldMap; // при загрузке пусто
 	}
 	// на основе Map создаем поле
 	createField() {
@@ -43,6 +43,10 @@ class DrawGameField {
 	init() {
 		startBtn.addEventListener('click', () => {
 			fieldWrap.textContent = ''; // очистка перед отрисовкой
+			// создание карты игрового поля и добавление в gameSettings
+			gameSettings.fieldMap = setFieldMap();
+			// перезапись карты поля
+			this.fieldMap = gameSettings.fieldMap;
 			this.createField();
 		});
 	}

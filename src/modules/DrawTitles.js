@@ -1,5 +1,6 @@
 import { gameSettings } from './gameSettings';
 
+
 class DrawTitles {
 	constructor(currentCell) {
 		this.titlesColorQuantity = gameSettings.titlesColorQuantity;

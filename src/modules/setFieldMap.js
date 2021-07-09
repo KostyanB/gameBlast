@@ -3,7 +3,7 @@ import { keyGen, imgNumGen } from "./keyGens";
 import validColorQuantity  from './validColorQuantity';
 
 // создание начальной карты поля
-const setFieldMap = () => {
+export const setFieldMap = () => {
 	const { fieldColumns, fieldLines } = gameSettings;
 	const map = new Map();
 	for (let x = 1; x <= fieldColumns; x++) {
@@ -19,4 +19,5 @@ const setFieldMap = () => {
 	console.log(map);
 	return map;
 };
-export default setFieldMap;
+// export default setFieldMap;
+// export const fieldMap = setFieldMap();
