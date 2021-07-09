@@ -1,17 +1,23 @@
-import { deletedElems1, checkArr1, checkedElem } from './titleSelect';
-import { getCheckArr } from './getCheckArr';
+import { gameSettings } from './gameSettings';
+import { deletedElems, checkList, checkedElem } from './titleSelect';
+import { getCheckList } from './getCheckList';
+import { showBlast } from './showBlast';
 
 // перепроверка ближайших соседей
 export const reFindNeighbors = () => {
-	deletedElems1.forEach(item => {
-
+	const { minBlastQuantity } = gameSettings;
+	// перебор удаляемых
+	deletedElems.forEach(item => {
+		// если уже в коллекции проверенных - ретурн
 		if (checkedElem.has(item)) {
 			return;
 		} else {
-			checkedElem.add(item);
-			getCheckArr(item);
+			checkedElem.add(item); // добавить в проверенные
+			checkList.clear(); // очистить список проверки
+			getCheckList(item); // перезапустить сбор соседей
 		}
-		// getCheckArr(item);
 	});
+
+	(deletedElems.size >= minBlastQuantity) &&	showBlast();
 };
 

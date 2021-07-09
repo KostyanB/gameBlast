@@ -1,26 +1,21 @@
 import './css/style.css';
 import { gameSettings } from './modules/gameSettings';
-import setFieldSize from './modules/setFieldSize';
-// import { setFieldMap }  from './modules/setFieldMap';
-import DrawGameField  from './modules/DrawGameField';
+import { setFieldSize } from './modules/setFieldSize';
+import { DrawGameField }  from './modules/DrawGameField';
 import { titleSelect }  from './modules/titleSelect';
+import { startGame } from './modules/startGame';
 
 // *************************************************
-//начальные установки игры в файле ./modules/gameSettings
-// *************************************************
-
-// const gameSetting = {
-// 	fieldColumns: 4, // ширина поля
-// 	fieldLines: 6, // высота поля
-// 	titlesColorQuantity: 3, // количество цветов 2...5 (с валидацией)
-// };
+//начальные установки игры
+gameSettings.fieldColumns = 4; // ширина поля
+gameSettings.fieldLines = 6; // высота поля
+gameSettings.titlesColorQuantity = 3;  // количество цветов 2...5 (с валидацией)
+gameSettings.minBlastQuantity = 3; // min количество сжигаемых тайтлов
 
 // установка размеров поля
-setFieldSize(gameSettings);
-// создание карты игрового поля и добавление в gameSettings
-// gameSettings.fieldMap = setFieldMap();
-
+setFieldSize();
 // прорисовка поля
-const gameField = new DrawGameField();
-gameField.init();
-titleSelect(gameSettings);
+// const gameField = new DrawGameField();
+// gameField.init();
+titleSelect();
+startGame();

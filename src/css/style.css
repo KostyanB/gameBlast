@@ -37,9 +37,30 @@ body {
     padding: 1px;
     box-sizing: border-box;
 }
-.field-cell > img {
+.title-img {
     height: 100%;
     width: 100%;
+    /* transition: 3s; */
+    /* opacity: 1; */
+    /* visibility: visible; */
+    animation: show 1s forwards;
+}
+@keyframes show {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
+.blasted {
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    /* transition: 1s; */
+    animation: blast 1s forwards;
+}
+@keyframes blast {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
 
 .game-control {

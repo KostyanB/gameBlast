@@ -1,8 +1,9 @@
+import { gameSettings } from './gameSettings';
+
 // установка размеров поля в зависимости
 // от заданных строк/столбцов
-
-const setFieldSize = ({ fieldColumns, fieldLines }) => {
-
+export const setFieldSize = () => {
+	const { fieldColumns, fieldLines } = gameSettings;
 	const width = fieldColumns * 40,
 		height = fieldLines * 45;
 	let style = document.getElementById('field-style');
@@ -18,4 +19,3 @@ const setFieldSize = ({ fieldColumns, fieldLines }) => {
         `;
 	document.head.appendChild(style);
 };
-export default setFieldSize;

@@ -1,11 +1,8 @@
-// import { findNeighbors } from './findNeighborns';
-import { getCheckArr } from './getCheckArr';
-
-export let checkArr = []; // проверочный массив
-export let deletedElems = []; // массив удаляемых ячеек
-export const checkArr1 = new Set();
-export const deletedElems1 = new Set();
-export const checkedElem = new Set();
+import { getCheckList } from './getCheckList';
+// коллекции для проверки
+export const checkList = new Set(); // потенциальные соседи
+export const deletedElems = new Set(); // на удаление
+export const checkedElem = new Set(); // проверенные
 
 // получение ячейки по которой клик
 export const titleSelect = () => {
@@ -14,34 +11,25 @@ export const titleSelect = () => {
 
 	// кликнутый запушили в базу
 	const pushTarget = target => {
-		console.log('target: ', target);
+		// массив ключей клика
 		clickedCellKeys = [
 			+target.dataset.x,
 			+target.dataset.y,
 			+target.dataset.colorNum,
 			target.dataset.key
 		];
-		// deletedElems1.add(clickedCellKeys);
-		// checkedElem.add(clickedCellKeys);
-		console.log('deletedElems1-0: ', deletedElems1);
-		deletedElems.push(clickedCellKeys);
-		// findNeighbors(targetKeyArr);
-
-		// checkArr = [];
-		// checkArr1.clear();
-		getCheckArr(clickedCellKeys);
+		// запуск сбора потенциальных соседей
+		getCheckList(clickedCellKeys);
 		// console.log('del:', deletedElems1);
 	};
 	// слушатель на поле
 	gameField.addEventListener('click', e => {
 		if (!e.target.classList.contains('title-img')) {
-			return;
+			return; // возврат если мимо
 		} else {
-			deletedElems1.clear();
-			deletedElems = [];
-			checkArr = [];
-			checkArr1.clear();
-			clickedCellKeys = [];
+			deletedElems.clear(); // чистим удаленные
+			checkList.clear(); // чистим чек-лист
+			clickedCellKeys = []; // чистим массив ключей клика
 			pushTarget(e.target);
 		}
 	});

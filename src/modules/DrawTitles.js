@@ -1,7 +1,7 @@
 import { gameSettings } from './gameSettings';
 
 
-class DrawTitles {
+export class DrawTitles {
 	constructor(currentCell) {
 		this.titlesColorQuantity = gameSettings.titlesColorQuantity;
         this.currentCell = currentCell;
@@ -34,4 +34,3 @@ class DrawTitles {
 	// 	this.addTitles(this.currentCell);
 	// }
 }
-export default DrawTitles;
