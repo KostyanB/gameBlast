@@ -11,7 +11,8 @@ export const startGame = () => {
 	startBtn.addEventListener('click', () => {
 		fieldWrap.textContent = ''; // очистка перед отрисовкой
 		// создание карты игрового поля и добавление в gameSettings
-		gameSettings.fieldMap = setFieldMap();
-		gameField.init();
+		gameSettings.fieldMap = setFieldMap(); // создаем карту поля
+		gameField.init(); // инициализируем поле
+		gameSettings.gameCount = 0; // обнулить счет
 	});
 };

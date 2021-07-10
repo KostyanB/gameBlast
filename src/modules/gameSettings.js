@@ -1,10 +1,11 @@
-// import { setFieldMap }  from './setFieldMap';
-
-// начальные установки игры
+// игровые переменные
 export const gameSettings = {
 	fieldColumns: 4, // ширина поля
 	fieldLines: 6, // высота поля
 	titlesColorQuantity: 3, // количество цветов 2...5 (с валидацией)
 	minBlastQuantity: 3, // минимальное сжигание
-	// fieldMap: setFieldMap(),
+	gameCount: 0, // счет игровой сессии
+	checkList: new Set(), // потенциальные соседи
+	deletedElems: new Set(), // на удаление
+	checkedElem: new Set(), // проверенные
 };

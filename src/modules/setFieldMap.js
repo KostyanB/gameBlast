@@ -16,6 +16,6 @@ export const setFieldMap = () => {
 		}
 		map.set(columnKey, column);
 	}
-	console.log(map);
+	// console.log(map);
 	return map;
 };

@@ -1,11 +1,9 @@
-import { gameSettings } from './gameSettings';
-import { deletedElems, checkList, checkedElem } from './titleSelect';
 import { getCheckList } from './getCheckList';
-import { showBlast } from './showBlast';
+import { gameSettings } from './gameSettings';
 
 // перепроверка ближайших соседей
 export const reFindNeighbors = () => {
-	const { minBlastQuantity } = gameSettings;
+	const { checkList, deletedElems, checkedElem } = gameSettings;
 	// перебор удаляемых
 	deletedElems.forEach(item => {
 		// если уже в коллекции проверенных - ретурн
@@ -17,7 +15,4 @@ export const reFindNeighbors = () => {
 			getCheckList(item); // перезапустить сбор соседей
 		}
 	});
-
-	(deletedElems.size >= minBlastQuantity) &&	showBlast();
 };
-

@@ -14,7 +14,7 @@ export class DrawTitles {
 		this.currentCell.innerHTML = `
 			<img src="images/title-img${imgNum}.png" class="title-img"
             alt="${this.titlesColorName[imgNum - 1]}" data-key="${titleKey}"
-			data-x="${x}" data-y="${y}" data-color-num="${imgNum}">
+			data-x="${x}" data-y="${y}" data-color="${imgNum}">
         `;
 	}
 	// проверка пользовательского кол-ва цветов

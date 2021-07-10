@@ -1,9 +1,10 @@
 import './css/style.css';
 import { gameSettings } from './modules/gameSettings';
 import { setFieldSize } from './modules/setFieldSize';
-import { DrawGameField }  from './modules/DrawGameField';
-import { titleSelect }  from './modules/titleSelect';
 import { startGame } from './modules/startGame';
+// import { DrawGameField }  from './modules/DrawGameField';
+import { selectTitle }  from './modules/selectTitle';
+
 
 // *************************************************
 //начальные установки игры
@@ -14,8 +15,11 @@ gameSettings.minBlastQuantity = 3; // min количество сжигаемы�
 
 // установка размеров поля
 setFieldSize();
+// старт игры
+startGame();
 // прорисовка поля
 // const gameField = new DrawGameField();
 // gameField.init();
-titleSelect();
-startGame();
+// выбор тайтла
+selectTitle();
+

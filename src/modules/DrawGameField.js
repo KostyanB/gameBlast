@@ -30,7 +30,6 @@ export class DrawGameField {
 	// добавляем ячейки
 	addCell(args) {
 		// console.log('args: ', args);
-
 		const [posX, posY] = args;
 		const currentBlock = document.querySelector(`.column-${posX}`);
 		const currentCell = document.createElement('div');

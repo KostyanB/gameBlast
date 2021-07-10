@@ -1,15 +1,15 @@
 import { gameSettings } from './gameSettings';
-import { deletedElems } from './titleSelect';
+import { gameScoring } from './gameScoring';
 
 export const showBlast = () => {
-    const { fieldMap } = gameSettings;
-    // console.log('fieldMap: ', fieldMap);
-    // console.log('del ', deletedElems);
+    const { gameCount, deletedElems } = gameSettings;
     deletedElems.forEach(item => {
         const blastElem = document.querySelector(`[data-key="${item[3]}"]`);
         // console.log('blastElem: ', blastElem);
         blastElem.classList.add('blasted');
 
     });
-
+    // const gameCount = [];
+    // gameCount.push(deletedElems.size);
+    // gameScoring(gameCount);
 };
