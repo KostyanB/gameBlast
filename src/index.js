@@ -1,25 +1,32 @@
 import './css/style.css';
-import { gameSettings } from './modules/gameSettings';
+import { getGameSetting } from './modules/getGameSetting';
 import { setFieldSize } from './modules/setFieldSize';
+import { settingValid } from './modules/settingValid';
 import { startGame } from './modules/startGame';
-// import { DrawGameField }  from './modules/DrawGameField';
 import { selectTitle }  from './modules/selectTitle';
 
+/* *******************************************************
+**************** начальные установки игры *****************
+fieldColumns = 4; // ширина поля
+fieldLines = 6; // высота поля
+titlesColorQuantity = 3;  // количество цветов
 
-// *************************************************
-//начальные установки игры
-gameSettings.fieldColumns = 4; // ширина поля
-gameSettings.fieldLines = 6; // высота поля
-gameSettings.titlesColorQuantity = 3;  // количество цветов 2...5 (с валидацией)
-gameSettings.minBlastQuantity = 3; // min количество сжигаемых тайтлов
-
+*********** настройки в bd/db.json *************************
+minWidth = 4; // тайтлов по горизонтали
+maxWidth = 15;
+minHeight = 4; // тайтлов по вертикали
+maxHeight = 15;
+minColor = 2; // цветов
+maxColor = 5;
+minBlastQuantity = 3; // количество сжигаемых тайтлов
+*/
+// получение настроек
+getGameSetting();
+// валидация пользовательских установок
+settingValid();
 // установка размеров поля
 setFieldSize();
 // старт игры
 startGame();
-// прорисовка поля
-// const gameField = new DrawGameField();
-// gameField.init();
 // выбор тайтла
 selectTitle();
-

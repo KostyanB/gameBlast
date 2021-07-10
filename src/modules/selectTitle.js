@@ -10,7 +10,7 @@ export const selectTitle = () => {
 	const { minBlastQuantity, checkList, deletedElems } = gameSettings;
 
 	// запуск процесса игры
-	const checkQuantity = () => {
+	const checkBlastQuantity = () => {
 		gameSettings.gameCount += deletedElems.size;
 		if (deletedElems.size >= minBlastQuantity) {
 			showBlast();
@@ -23,7 +23,7 @@ export const selectTitle = () => {
 			deletedElems.clear(); // чистим удаленные
 			checkList.clear(); // чистим чек-лист
 			getCheckList(clickedKeys);
-			checkQuantity();
+			checkBlastQuantity();
 		}
 	};
 	// получаем ключи клика

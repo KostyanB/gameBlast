@@ -1,0 +1,11 @@
+[
+	{
+		"minWidth": 4,
+		"maxWidth": 15,
+		"minHeight": 4,
+		"maxHeight": 15,
+		"minColor": 2,
+		"maxColor": 5,
+		"minBlastQuantity": 3
+	}
+	]
