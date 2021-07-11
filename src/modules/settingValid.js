@@ -8,24 +8,24 @@ export const settingValid = () => {
 		colorsInput = document.querySelector('.color-quantity'),
 		gameControl = document.querySelector('.game-control');
 
-	const { minWidth, maxWidth, minHeight, maxHeight, minColor,	maxColor } = gameSettings;
+	// const { minWidth, maxWidth, minHeight, maxHeight, minColor,	maxColor } = gameSettings;
 
 	const validQuantity = (min, max, value) => ((value < min) ? min : (value > max) ? max : value);
 
 	gameControl.addEventListener('change', e => {
 		const target = e.target;
 		if (target === columnsInput) {
-			const columns = validQuantity(minWidth, maxWidth, +target.value);
+			const columns = validQuantity(gameSettings.minWidth, gameSettings.maxWidth, +target.value);
 			gameSettings.fieldColumns = columns;
 			columnsInput.value = columns;
 		}
 		if (target === linesInput) {
-			const lines = validQuantity(minHeight, maxHeight, +target.value);
+			const lines = validQuantity(gameSettings.minHeight, gameSettings.maxHeight, +target.value);
 			gameSettings.fieldLines = lines;
 			linesInput.value = lines;
 		}
 		if (target === colorsInput) {
-			const colors = validQuantity(minColor, maxColor, +target.value);
+			const colors = validQuantity(gameSettings.minColor, gameSettings.maxColor, +target.value);
 			gameSettings.titlesColorQuantity = colors;
 			colorsInput.value = colors;
 		}

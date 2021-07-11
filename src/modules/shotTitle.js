@@ -1,10 +1,10 @@
 import { getCheckList } from './getCheckList';
 import { gameSettings } from './gameSettings';
 import { showBlast } from './showBlast';
-import { gameScoring } from './gameScoring';
+import { gameResultControl } from './gameResultControl';
 
 // получение ячейки по которой клик
-export const selectTitle = () => {
+export const shotTitle = () => {
 	const gameField = document.querySelector('.game-field');
 	let clickedKeys = []; // массив ключей клика
 	const { minBlastQuantity, checkList, deletedElems } = gameSettings;
@@ -14,7 +14,8 @@ export const selectTitle = () => {
 		gameSettings.gameCount += deletedElems.size;
 		if (deletedElems.size >= minBlastQuantity) {
 			showBlast();
-			gameScoring();
+			gameSettings.tryCount--;
+			gameResultControl();
 		}
 	};
 	// исключаем двойной клик по удаляемому

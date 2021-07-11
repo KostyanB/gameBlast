@@ -6,6 +6,8 @@
 		"maxHeight": 15,
 		"minColor": 2,
 		"maxColor": 5,
-		"minBlastQuantity": 3
+		"minBlastQuantity": 3,
+		"maxTryCount": 20,
+		"winCount": 100
 	}
 	]
