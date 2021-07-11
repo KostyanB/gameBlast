@@ -1,10 +1,9 @@
 import { gameSettings } from './gameSettings';
 
-
 export class DrawTitles {
 	constructor(currentCell) {
 		this.titlesColorQuantity = gameSettings.titlesColorQuantity;
-        this.currentCell = currentCell;
+		this.currentCell = currentCell;
 		this.titlesColorName = ['blue', 'green', 'violet', 'red', 'yellow'];
 	}
 	// расстановка тайтлов
@@ -17,20 +16,4 @@ export class DrawTitles {
 			data-x="${x}" data-y="${y}" data-color="${imgNum}">
         `;
 	}
-	// проверка пользовательского кол-ва цветов
-	// validColorQuantity() {
-	// 	const validQuantity = (this.titlesColorQuantity < 2) ? 2 :
-	// 		(this.titlesColorQuantity > 5) ? 5 :
-	// 			this.titlesColorQuantity;
-	// 	return validQuantity;
-	// }
-	// // генератор выбора цвета
-	// imgNumGen(min, max) {
-	// 	const key = min + Math.floor(Math.random() * (max + 1 - min));
-	// 	return key;
-	// }
-	//
-	// init() {
-	// 	this.addTitles(this.currentCell);
-	// }
 }

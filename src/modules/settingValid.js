@@ -12,7 +12,7 @@ export const settingValid = () => {
 
 	const validQuantity = (min, max, value) => ((value < min) ? min : (value > max) ? max : value);
 
-    gameControl.addEventListener('change', e => {
+	gameControl.addEventListener('change', e => {
 		const target = e.target;
 		if (target === columnsInput) {
 			const columns = validQuantity(minWidth, maxWidth, +target.value);

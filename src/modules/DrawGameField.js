@@ -1,10 +1,7 @@
 import { DrawTitles } from './DrawTitles';
-// import { setFieldMap }  from './setFieldMap';
 import { gameSettings } from './gameSettings';
 
-// const startBtn = document.getElementById('start');
 const fieldWrap = document.querySelector('.field-wrap');
-// const gameField = document.querySelector('.game-field');
 
 export class DrawGameField {
 	constructor() {
@@ -38,18 +35,10 @@ export class DrawGameField {
 		currentCell.dataset.y = posY;
 		currentBlock.append(currentCell);
 		const drawTitles = new DrawTitles(currentCell);
-		// drawTitles.init();
 		drawTitles.addTitles(args);
 	}
 	//
 	init() {
-		// startBtn.addEventListener('click', () => {
-		// fieldWrap.textContent = ''; // очистка перед отрисовкой
-		// создание карты игрового поля и добавление в gameSettings
-		// gameSettings.fieldMap = setFieldMap();
-		// перезапись карты поля
-		// this.fieldMap = gameSettings.fieldMap;
 		this.createField();
-		// });
 	}
 }

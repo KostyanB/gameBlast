@@ -11,7 +11,7 @@ export const findNeighbors = cellKeys => {
 		} else {
 			if ((item[0] === x && Math.abs(item[1] - y) === 1) ||
                 (item[1] === y && Math.abs(item[0] - x) === 1))
-					deletedElems.add(item);
+				deletedElems.add(item);
 		}
 	});
 	// запуск проверки ближайших соседей
