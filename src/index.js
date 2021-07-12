@@ -29,6 +29,8 @@ minHeight = 4 тайтлов по вертикали
 maxHeight = 15
 minColor = 2 цветов
 maxColor = 5
+blastDelay = 1000 задержка ms blast-эффекта
 minBlastQuantity = 3 количество сжигаемых тайтлов
-maxTryCount = 30 максимальное количество ходов
+maxTryCount = 20 максимальное количество ходов
+winCount = 100 набрать очков для победы
 */

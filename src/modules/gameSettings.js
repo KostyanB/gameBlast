@@ -8,9 +8,7 @@ export const gameSettings = {
 	tryCount: 0, // количество "выстрелов"
 	titlesColorName: ['blue', 'green', 'violet', 'red', 'yellow'], // цвета тайтлов
 	fieldMap: new Map(), // карта поля
-	titleMap: new Map(), // карта тайтлов
 	checkList: new Set(), // потенциальные соседи
 	deletedElems: new Set(), // на удаление
 	checkedElem: new Set(), // проверенные
-	newCol: new Map(),
 };

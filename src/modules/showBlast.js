@@ -1,25 +1,21 @@
 import { gameSettings } from './gameSettings';
-import { gameField } from './startGame';
 import { reWriteKeys } from './reWriteKeys';
-import { addTitles } from './addTitles';
 import { moveTitles } from './moveTitles';
-
+import { rewriteFieldMap } from './rewriteFieldMap';
 
 export const showBlast = () => {
-	const fieldWrap = document.querySelector('.field-wrap');
-	const { deletedElems, fieldMap } = gameSettings;
-
+	const { deletedElems, fieldMap, blastDelay } = gameSettings;
+	// перебор удаляемых тайтлов
 	deletedElems.forEach(delKeys => {
 		const blastElem = document.querySelector(`[data-key="${delKeys[3]}"]`);
 		blastElem.classList.add('blasted');
 		setTimeout(() => {
 			const blastParent = blastElem.parentNode;
 			blastParent.removeChild(blastElem);
-		}, 1000)
+		}, blastDelay); // в styles для сжигания 1 сек opasity-> 0
 
-		// перебираем столбцы
+		// получаем столбец
 		const column = fieldMap.get(delKeys[0]);
-		// console.log('column: ', column);
 		for (const item of column) {
 			const [key, elem] = item;
 			if (elem[3] === delKeys[3]) column.delete(key);
@@ -28,12 +24,6 @@ export const showBlast = () => {
 		// переписываем ключи x/y
 		reWriteKeys(column, delKeys);
 	});
-	setTimeout(() => moveTitles(), 1000);
-	// добавляем недостающие тайтлы
-	// addTitles();
-	// перерисовываем поле
-	// setTimeout(() => {
-		// fieldWrap.textContent = '';
-		// gameField.init();
-	// }, 500);
+	rewriteFieldMap();
+	setTimeout(() => moveTitles(), blastDelay); // в styles для сжигания 1 сек opasity-> 0
 };
