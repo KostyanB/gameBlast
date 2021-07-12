@@ -1,20 +1,27 @@
 import { DrawTitles } from './DrawTitles';
 import { gameSettings } from './gameSettings';
 
-const fieldWrap = document.querySelector('.field-wrap');
+export const fieldWrap = document.querySelector('.field-wrap');
 
 export class DrawGameField {
 	constructor() {
 		this.titlesColorQuantity = gameSettings.titlesColorQuantity;
-		this.fieldMap = 0; // при загрузке пусто
+		this.fieldMap = gameSettings.fieldMap; // при загрузке пусто
 	}
 	// на основе Map создаем поле
 	createField() {
-		this.fieldMap = gameSettings.fieldMap;
+		// this.fieldMap = gameSettings.fieldMap;
 		// ключи - номера столбцов
 		for (const column of this.fieldMap.keys()) this.addColumn(column);
 		// value - массивы с влож массивами - парами координат
-		for (const cellKeys of this.fieldMap.values()) cellKeys.forEach(posKey => this.addCell(posKey));
+		for (const cellKeys of this.fieldMap.values()) {
+			// console.log('cellKeys: ', cellKeys);
+			cellKeys.forEach(posKey => {
+				// console.log('posKey: ', posKey);
+				this.addCell(posKey);
+
+			});
+		}
 	}
 	// добавляем столбцы
 	addColumn(posY) {
@@ -24,6 +31,10 @@ export class DrawGameField {
 		column.dataset.column = `${posY}`;
 		fieldWrap.append(column);
 	}
+
+	createLine() {
+
+	}
 	// добавляем ячейки
 	addCell(args) {
 		// console.log('args: ', args);
@@ -31,8 +42,8 @@ export class DrawGameField {
 		const currentBlock = document.querySelector(`.column-${posX}`);
 		const currentCell = document.createElement('div');
 		currentCell.classList.add('field-cell');
-		currentCell.dataset.x = posX;
-		currentCell.dataset.y = posY;
+		currentCell.dataset.cellX = posX;
+		currentCell.dataset.cellY = posY;
 		currentBlock.append(currentCell);
 		const drawTitles = new DrawTitles(currentCell);
 		drawTitles.addTitles(args);

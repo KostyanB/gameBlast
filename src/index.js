@@ -5,6 +5,17 @@ import { settingValid } from './modules/settingValid';
 import { startGame } from './modules/startGame';
 import { shotTitle }  from './modules/shotTitle';
 
+// получение настроек
+getGameSetting();
+// валидация пользовательских установок
+settingValid();
+// установка размеров поля
+setFieldSize();
+// старт игры
+startGame();
+// выбор тайтла
+shotTitle();
+
 /* *******************************************************
 **************** установки default*****************
 fieldColumns = 4 ширина поля
@@ -21,13 +32,3 @@ maxColor = 5
 minBlastQuantity = 3 количество сжигаемых тайтлов
 maxTryCount = 30 максимальное количество ходов
 */
-// получение настроек
-getGameSetting();
-// валидация пользовательских установок
-settingValid();
-// установка размеров поля
-setFieldSize();
-// старт игры
-startGame();
-// выбор тайтла
-shotTitle();

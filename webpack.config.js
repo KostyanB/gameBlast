@@ -34,7 +34,7 @@ module.exports = {
 			patterns: [
 				{ from: "./src/images", to: "images" },
 				{ from: "./src/db", to: "db" },
-				// { from: "./src/fonts", to: "fonts" },
+				{ from: "./src/fonts", to: "fonts" },
 				// { from: "css", to: "css" },
 			],
 		}),

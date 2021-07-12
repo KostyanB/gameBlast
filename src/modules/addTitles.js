@@ -10,8 +10,9 @@ export const addTitles = () => {
 			for (let y = item.size + 1;  y <= fieldLines; y++) {
 				const imgNum =  imgNumGen(1, titlesColorQuantity);
 				const titleKey = keyGen(7);
-				item.set(titleKey, [key, y, imgNum, titleKey]);
+				item.set(y, [key, y, imgNum, titleKey]);
 			}
 		}
 	});
+	console.log(fieldMap);
 };

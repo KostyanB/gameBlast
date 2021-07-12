@@ -50,7 +50,7 @@ body {
 .title-img {
     height: 100%;
     width: 100%;
-    /* transition: 1s; */
+    transition: 1s;
     /* opacity: 1; */
     /* visibility: visible; */
     /* animation: show 1s forwards; */
@@ -66,12 +66,12 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: 1s;
-    /* animation: blast 1s forwards; */
+    animation: blast 1s forwards;
 }
-/* @keyframes blast {
+@keyframes blast {
     0% {opacity: 1;}
     100% {opacity: 0;}
-} */
+}
 
 .game-control {
     display: flex;
@@ -85,6 +85,7 @@ body {
     height: 60px;
     width: 60px;
     margin-top: 20px;
+    font-family: 'Marvin', Arial, Helvetica, sans-serif;
 }
 
 .result {
