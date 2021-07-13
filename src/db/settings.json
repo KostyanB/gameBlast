@@ -8,7 +8,7 @@
 		"maxColor": 5,
 		"blastDelay": 800,
 		"minBlastQuantity": 3,
-		"maxTryCount": 10,
+		"maxTryCount": 20,
 		"winCount": 100
 	}
 ]

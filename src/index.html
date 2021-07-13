@@ -11,6 +11,14 @@
 </head>
 
 <body>
+	<header>
+		<div>
+			<p class="target-header">Цель: набрать 100 очков за 20 ходов</p>
+		</div>
+		<div>
+			<progress id="progress-scoring" max=100 value=0></progress>
+		</div>
+	</header>
 	<section class="game">
 		<div class="game-field">
 			<div class="field-wrap blocked">
@@ -18,18 +26,18 @@
 		</div>
 		<div class="game-control">
 			<div class="field-setting">
-				<h3>Введите желаемые установки</h3>
-				<div>
+				<h3>Выберите параметры</h3>
+				<div class="user-input">
 					<input type="number" class="setting field-columns" min="4" max="15" step="1" placeholder="4">
-					<span class="title">Ширина поля (от 4 до 15)</span>
+					<span class="title title-columns">Ширина поля от 4 до 15</span>
 				</div>
-				<div>
-					<input type="number" class="setting field-lines" min="4" max="15" step="1" placeholder="6">
-					<span class="title">Высота поля (от 4 до 15)</span>
+				<div class="user-input">
+					<input type="number" class="setting field-lines" min="4" max="15" step="1" placeholder="4">
+					<span class="title title-lines">Высота поля от 4 до 15</span>
 				</div>
-				<div>
-					<input type="number" class="setting color-quantity" min="2" max="5" step="1" placeholder="3">
-					<span class="title">Количество цветов (от 2 до 5)</span>
+				<div class="user-input">
+					<input type="number" class="setting color-quantity" min="2" max="5" step="1" placeholder="2">
+					<span class="title title-colors">Количество цветов от 2 до 5</span>
 				</div>
 				<div>
 					<button id="start">Старт</button>
@@ -39,19 +47,19 @@
 				<div class="result-field">
 					<div>
 						<input type="text" class="scoring" placeholder="0" disabled>
-						<span class="title">Итого очков</span>
+						<span class="title-scoring">Счет игры</span>
 					</div>
-					<div>
-						<progress id="progress-scoring" max=100 value=0>осталось</progress>
-					</div>
+					<!-- <div>
+						<progress id="progress-scoring" max=100 value=0></progress>
+					</div> -->
 				</div>
 				<div class="result-field">
 					<div>
-						<input type="text" class="shot-count" disabled>
-						<span class="title">Осталось ходов</span>
+						<!-- <input type="text" class="shot-count" disabled> -->
+						<span class="title title-shot">Осталось ходов</span>
 					</div>
 					<div class="game-progress">
-						<progress id="progress-shot" max=100 value=100>осталось</progress>
+						<progress id="progress-shot" max=100 value=100></progress>
 					</div>
 
 				</div>
