@@ -1,6 +1,6 @@
 @font-face {
     font-family: Marvin;
-    src: url("../fonts/Marvin.woff");
+    src: url("fonts/Marvin.woff");
 }
 
 body {
@@ -8,6 +8,7 @@ body {
         padding: 0;
         font-family: 'Marvin', Arial, Helvetica, sans-serif;
         color:#0d233d;
+        background: #2465bd;
 }
 
 header {
@@ -17,15 +18,15 @@ header {
     flex-direction: column;
     max-width: 1100px;
     padding-top: 20px;
-    margin: 0 auto;
+    margin: 0 auto 20px;
 }
+
 .target-header {
     display: block;
     margin: 20px auto 20px;
     text-align: center;
     font-size: 1.5em;
     font-weight: 500;
-
 }
 
 .game {
@@ -33,7 +34,7 @@ header {
     display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin: 20px auto
+        margin: 0 auto
 }
 .game-field {
     /* width: 400px; */
@@ -42,7 +43,7 @@ header {
     background-color: #0d233d;
     margin: 50px auto;
     padding: 5px;
-    border: 4px solid #8cffff;
+    border: 4px solid #73befb;
     border-radius: 20px;
 }
 
@@ -104,10 +105,14 @@ header {
 }
 #start {
     height: 60px;
-    width: 60px;
+    width: 100px;
     margin-top: 20px;
+    display: block;
+    border-radius: 10px;
+    font-size: 24px;
     font-family: 'Marvin', Arial, Helvetica, sans-serif;
-    color:#0d233d;
+    color:#73befb;
+    background-color: #c346ac;
 }
 
 .user-input {
@@ -115,14 +120,35 @@ header {
 }
 
 .user-input > input, .scoring, .shot-count {
-    width: 50px;
-    height: 30px;
-    font-size: 20px;
     font-weight: 400;
     text-align: center;
     font-family: 'Marvin', Arial, Helvetica, sans-serif;
-    color:#0d233d;
+    color:#73befb;
+    border: none;
+    padding: 5px;
 }
+.user-input > input {
+    width: 50px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    background: #0e3467;
+}
+.scoring {
+    width: 87px;
+    height: 40;
+    padding: 5px;
+    font-size: 2em;
+    border-radius: 10px;
+    background: #c346ac;
+}
+
+.title-scoring {
+    font-size: 24px;
+    color:#73befb;
+    line-height: 24px;
+}
+
 
 .result {
     margin-top: 20px;
@@ -139,8 +165,6 @@ header {
     display: block;
     margin: 0 auto;
 }
-
-.lose
 
 .setting {
     width: 30px;
@@ -173,14 +197,27 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 @media (max-width: 768px) {
-    body {
+    body, .game {
         flex-direction: column;
+    }
+    .target-header  {
+        font-size: 20px;
     }
     .game-field {
         width: 100%;
+        margin-bottom: 10px;
+        margin-top: 30px;
     }
     .game-control {
         width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .field-setting, .result {
+        display:block;
+        margin-left: 20%;
     }
 
 }
@@ -194,7 +231,7 @@ progress {
     width: 200px;
     height: 20px;
     border-radius: 10px;
-    background: #8cffff;
+    background: #73befb;
     margin-top: 10px;
     display:block
 }
@@ -202,13 +239,13 @@ progress::-webkit-progress-bar {
 width: 200px;
 height: 20px;
 border-radius: 10px;
-background:#8cffff;
+background:#73befb;
 }
 progress::-webkit-progress-value {
 border-radius: 10px;
-background: #40d508;
+background: #89ef00;
 }
 progress::-moz-progress-bar {
 border-radius: 10px;
-background: #40d508;
+background: #89ef00;
 }

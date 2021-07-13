@@ -25,25 +25,10 @@
 			</div>
 		</div>
 		<div class="game-control">
-			<div class="field-setting">
-				<h3>Выберите параметры</h3>
-				<div class="user-input">
-					<input type="number" class="setting field-columns" min="4" max="15" step="1" placeholder="4">
-					<span class="title title-columns">Ширина поля от 4 до 15</span>
-				</div>
-				<div class="user-input">
-					<input type="number" class="setting field-lines" min="4" max="15" step="1" placeholder="4">
-					<span class="title title-lines">Высота поля от 4 до 15</span>
-				</div>
-				<div class="user-input">
-					<input type="number" class="setting color-quantity" min="2" max="5" step="1" placeholder="2">
-					<span class="title title-colors">Количество цветов от 2 до 5</span>
-				</div>
+			<div class="result">
 				<div>
 					<button id="start">Старт</button>
 				</div>
-			</div>
-			<div class="result">
 				<div class="result-field">
 					<div>
 						<input type="text" class="scoring" placeholder="0" disabled>
@@ -61,7 +46,21 @@
 					<div class="game-progress">
 						<progress id="progress-shot" max=100 value=100></progress>
 					</div>
-
+				</div>
+			</div>
+			<div class="field-setting">
+				<h3>Выберите параметры</h3>
+				<div class="user-input">
+					<input type="number" class="setting field-columns" min="4" max="15" step="1" placeholder="4">
+					<span class="title title-columns">Ширина поля от 4 до 15</span>
+				</div>
+				<div class="user-input">
+					<input type="number" class="setting field-lines" min="4" max="15" step="1" placeholder="4">
+					<span class="title title-lines">Высота поля от 4 до 15</span>
+				</div>
+				<div class="user-input">
+					<input type="number" class="setting color-quantity" min="2" max="5" step="1" placeholder="2">
+					<span class="title title-colors">Количество цветов от 2 до 5</span>
 				</div>
 			</div>
 		</div>

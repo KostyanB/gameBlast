@@ -4,10 +4,13 @@
 
 ## О приложениии
 
-Демо-версия на [GameBlast](https://).
+Демо-версия на [GameBlast](https://kostyanb.github.io/gameBlastDemo/).
 
-*
-*
+* Процесс игры заключается в "сжигании" заданного количества "тайтлов" за заданное количество ходов
+* При наборе заданного количества очков пользователю выводится сообщение
+* При исчерпании запаса ходов игровое поле блокирутся и игрок уведомляется об этом
+* Размеры игрового поля устанавливаются автоматически в зависимости от заданных игроком параметров
+
 
 ## Настройки приложения
 
@@ -52,10 +55,12 @@ My pet-project
 
 ## About App
 
-Demo [GameBlast](https://).
+Demo [GameBlast](https://kostyanb.github.io/gameBlastDemo/).
 
-*
-*
+* The game process consists in "blasting" a given number of "titles" for given number of moves
+* When given number of points is collected, a message is displayed to the user
+* When stock of moves is exhausted, playing field is blocked and player is notified about it
+* The dimensions of playing field are set automatically depending on parameters set by player
 
 ## Application settings
 
