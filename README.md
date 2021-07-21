@@ -1,10 +1,10 @@
 # "GameBlast" игра по мотивам популярных blast-games
 
-Мой pet-проект.
+Тестовое задание игровой студии.
 
 ## О приложениии
 
-Демо-версия на [GameBlast](https://kostyanb.github.io/gameBlastDemo/).
+Демо-версия на [GameBlast](https://mygame-blast.web.app).
 
 * Процесс игры заключается в "сжигании" заданного количества "тайтлов" за заданное количество ходов
 * При наборе заданного количества очков пользователю выводится сообщение
@@ -30,7 +30,7 @@
 * maxColor - максимальное количество цветов (5)
 * blastDelay - задержка ms blast-эффекта (1000 ms)
 * minBlastQuantity - минимальное количество сжигаемых тайтлов (3)
-* maxTryCount - максимальное количество ходов (20)
+* maxTryCount - максимальное количество ходов (25)
 * winCount - набрать очков для победы (100)
 
 ## Стек технологий
@@ -51,11 +51,11 @@
 Eng
 ## "GameBlast" a game based on the popular blast-games
 
-My pet-project
+Test task from game-studio.
 
 ## About App
 
-Demo [GameBlast](https://kostyanb.github.io/gameBlastDemo/).
+Demo [GameBlast](https://mygame-blast.web.app).
 
 * The game process consists in "blasting" a given number of "titles" for given number of moves
 * When given number of points is collected, a message is displayed to the user
@@ -80,7 +80,7 @@ Demo [GameBlast](https://kostyanb.github.io/gameBlastDemo/).
 * maxColor - maximum number of colors (5)
 * blastDelay - delay of blast effect (1000 ms)
 * minBlastQuantity - the minimum number of titles to blast (3)
-* maxTryCount - maximum number of moves (20)
+* maxTryCount - maximum number of moves (25)
 * winCount - score points to win (100)
 
 ## Technology stack

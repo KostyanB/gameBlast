@@ -127,6 +127,13 @@ header {
     border: none;
     padding: 5px;
 }
+/* .shot-count {
+    background: transparent;
+    width: 30px;
+    color:#0d233d;
+    font-size: 24px;
+
+} */
 .user-input > input {
     width: 50px;
     height: 30px;
@@ -248,4 +255,10 @@ background: #89ef00;
 progress::-moz-progress-bar {
 border-radius: 10px;
 background: #89ef00;
+}
+.winner {
+    color:#89ef00;
+}
+.looser {
+    color: #ff004c;
 }

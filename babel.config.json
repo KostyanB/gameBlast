@@ -10,5 +10,10 @@
                 }
             }
         ]
-    ]
+    ],
+    "assumptions": {
+        "noDocumentAll": true
+    },
+    "plugins": ["@babel/plugin-proposal-optional-chaining"]
+
 }
